@@ -14,9 +14,11 @@ class App extends Component {
   ];
 
   state = {
-    contacts: !JSON.parse(localStorage.getItem(`contacts`)).length
-      ? this.defaultContacts
-      : JSON.parse(localStorage.getItem(`contacts`)),
+    contacts:
+      JSON.parse(localStorage.getItem(`contacts`)) === null ||
+      !JSON.parse(localStorage.getItem(`contacts`)).length
+        ? this.defaultContacts
+        : JSON.parse(localStorage.getItem(`contacts`)),
     filter: '',
   };
 
