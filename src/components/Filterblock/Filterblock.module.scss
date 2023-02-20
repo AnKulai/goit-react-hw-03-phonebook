@@ -1,0 +1,46 @@
+.filteblock {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  //   margin-top: 30px;
+
+  & > label {
+    font-weight: bold;
+  }
+
+  & > .inputWrapper {
+    font-size: 16px;
+    width: 100%;
+    position: relative;
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: transparent;
+      top: 10px;
+      right: 10px;
+      border-radius: 50%;
+    }
+    & > input {
+      width: 100%;
+      height: auto;
+      padding: 10px;
+    }
+  }
+
+  & > .ActiveInputWrapper {
+    @extend .inputWrapper;
+    &::after {
+      background: gold;
+    }
+  }
+
+  & > button {
+    padding: 10px;
+  }
+}

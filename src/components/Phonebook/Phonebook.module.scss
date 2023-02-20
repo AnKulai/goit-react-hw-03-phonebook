@@ -1,0 +1,28 @@
+.phonebookForm {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+
+  & > label {
+    font-weight: bold;
+  }
+
+  & > input {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  & > button {
+    padding: 10px;
+    font-weight: bold;
+    background: transparent;
+    transition-duration: .3s;
+
+    &:hover {
+      color: white;
+      background: black;
+    }
+  }
+}
